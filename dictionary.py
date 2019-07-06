@@ -27,6 +27,11 @@ def locate (word):
     # Checking wether the word exist
     if word in data:
         return data[word]
+
+    
+    # Checking if the word is a city, country and so ever.
+    elif word.title() in data:
+        return data[word.title()]
     
     # Checking wether there are any similar word
     elif len(sWord) > 0:
