@@ -32,6 +32,10 @@ def locate (word):
     # Checking if the word is a city, country and so ever.
     elif word.title() in data:
         return data[word.title()]
+
+    # Checking if the word is uppercase
+    elif word.upper() in data:
+        return data[word.upper()]
     
     # Checking wether there are any similar word
     elif len(sWord) > 0:
